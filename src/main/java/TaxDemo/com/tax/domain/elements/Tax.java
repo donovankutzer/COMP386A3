@@ -29,7 +29,7 @@ public abstract class Tax extends Deduction {
 	 * checks acceptable taxpercentage inputs
 	 * checking is done in two parts
 	 *
-	 * @param taxPercentage an array of tax percentages
+	 * @param taxPercentages an array of tax percentages
 	 * @param depth         defines the depth of income category
 	 * @return accummulated taxes above the depth
 	 */

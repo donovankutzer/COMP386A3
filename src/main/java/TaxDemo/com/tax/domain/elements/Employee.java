@@ -7,7 +7,6 @@ import java.util.List;
 
 /**
  * @author Opeyemi Adesina
- * @version: %I% %G%
  * @since 1.0
  */
 // line 10 "../../../../../../../ump/tmp17w5ky53o/model.ump"
