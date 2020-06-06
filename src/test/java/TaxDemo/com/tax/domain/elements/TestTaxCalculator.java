@@ -162,6 +162,9 @@ public class TestTaxCalculator {
     @Test
     public void testFederalTax() {
 
+        // Mitchell Calder
+        // Expanded Federal tax tests
+        
         employee = new Employee("Opeyemi Adesina", 22, 22000.00, province);
         FederalTax federalTax = new FederalTax(employee);
         assertEquals(3300.0, employee.totalDeductions(), 0);
@@ -267,14 +270,11 @@ public class TestTaxCalculator {
                 "  worksIn = [name:alberta]", employee.toString());
 
         // Mitchell Calder
-        // Testing employee setters
+        // Testing employee
 
         assertTrue(employee.setName("Test"));
         assertTrue(employee.setAge(15));
         assertTrue(employee.setGrossIncome(50000));
-
-        //Testing employee getters
-
         assertTrue(employee.hasDeductions());
 
     }
