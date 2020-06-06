@@ -155,12 +155,7 @@ public class TestTaxCalculator {
         ProvincialTax noTax = new ProvincialTax(unimEmployee);
         taxAmount = noTax.computeTaxes(50000, "Default");
         assertEquals(0, taxAmount, 0);
-//        case "quebec":
-//        return 0.0;
-//        case "newfoundland":
-//        return 0.0;
-//        default:
-//        return 0.0;
+
     }
 
     @Test
