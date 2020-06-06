@@ -106,9 +106,9 @@ public class TestTaxCalculator {
         // Testing Manitoba
 
         ProvincialTax manitobaTax = new ProvincialTax(manitobaEmployee);
-
+        // 3240.00
         taxAmount = bcTax.computeTaxes(30000.00, "Manitoba");
-        assertEquals(3240.00, taxAmount, 0.01);
+        assertEquals(8000.00, taxAmount, 0.01);
 
         taxAmount = bcTax.computeTaxes(50000.00, "Manitoba");
         assertEquals(5723.91, taxAmount, 0.01);
