@@ -136,6 +136,7 @@ public class TestTaxCalculator {
         taxAmount = onTax.computeTaxes(250000.00, "Ontario");
         assertEquals(25567.07, taxAmount, 0.01);
 
+        // Mitchell Calder
         // Testing unimplemented Provinces
 
         quebec = new Province("Quebec");
@@ -265,7 +266,8 @@ public class TestTaxCalculator {
         assertEquals("[name:Opeyemi Adesina,age:22.0,grossIncome:55000.0]\n" +
                 "  worksIn = [name:alberta]", employee.toString());
 
-        //Testing employee setters
+        // Mitchell Calder
+        // Testing employee setters
 
         assertTrue(employee.setName("Test"));
         assertTrue(employee.setAge(15));
