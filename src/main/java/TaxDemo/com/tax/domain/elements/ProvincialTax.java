@@ -49,7 +49,7 @@ public class ProvincialTax extends Tax {
 			case "quebec":
 				return 0.0;
 			case "saskatchewan":
-				return 0.0;
+				return saskatchewan(grossIncome);
 			case "newfoundland":
 				return 0.0;
 			case "ontario":
@@ -120,6 +120,28 @@ public class ProvincialTax extends Tax {
 		//provincialTaxBracket = "17.4% [$72164 .. )
 		else {
 			return (grossIncome - 72164) * .1740 + computeTaxCategoryPay(taxPercentages, lowerBounds, 1);
+		}
+	}
+
+	//Jayme
+	private double saskatchewan(double grossIncome){
+ //setting up tax percentages and their respective lower bounds
+	 double [] taxPercentages = {0.105, 0.125, 0.145};
+	 double [] lowerBounds = {45225.0, 129214.0};
+
+		//provincialTaxBracket = "10.5% [$0 .. $45225.0)
+		if (grossIncome >= 0.0 && grossIncome < 45225.0) {
+			return 0.105 * grossIncome;
+		}
+
+		//provincialTaxBracket = "12.50% [$45225.0 .. $129214.0)
+		else if (grossIncome >= 45225.0 && grossIncome < 129214.0) {
+			return (grossIncome - 45225.0) * 0.125 + computeTaxCategoryPay(taxPercentages, lowerBounds, 0);
+		}
+
+		//provincialTaxBracket = "14.5% [$129214 .. )
+		else {
+			return (grossIncome - 129214.0) * 0.1450 + computeTaxCategoryPay(taxPercentages, lowerBounds, 1);
 		}
 	}
 
