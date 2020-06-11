@@ -132,7 +132,7 @@ public class TestTaxCalculator {
         ProvincialTax saskatchewanTax = new ProvincialTax(saskatchewanEmployee);
         //3150
         taxAmount = bcTax.computeTaxes(30000.00, "saskatchewan");
-        assertEquals(3100.00, taxAmount, 0.01);
+        assertEquals(3150.00, taxAmount, 0.01);
 
         taxAmount = bcTax.computeTaxes(80000.00, "saskatchewan");
         assertEquals(9095.50, taxAmount, 0.01);
